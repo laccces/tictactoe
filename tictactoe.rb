@@ -1,3 +1,4 @@
+# https://replit.com/@lacesoutdan/ProudTestyReality#main.rb 
 
 def blank_board()
   blank = [["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]  
@@ -27,10 +28,26 @@ puts board_index
 
 puts "Where would you like to go? Please enter a number between 1 & 9."
 
-user_choice = gets.to_i
+user_choice = gets
 
-if user_choice == 1
-  blank[0][0] << "X"
+if user_choice = "1"
+  blank[0][0] = "X"
+elsif user_choice = "2"
+  blank[0][1] = "X"
+elsif user_choice = "3"
+  blank[0][2] = "X"
+elsif user_choice = "4"
+  blank[1][0] = "X"
+elsif user_choice = "5"
+  blank[1][1] = "X"
+elsif user_choice = "6"
+  blank[1][2] = "X"
+elsif user_choice = "7"
+  blank[2][0] = "X"
+elsif user_choice = "8"
+  blank[2][1] = "X"
+elsif user_choice = "9"
+  blank[2][2] = "X"
 else 
   puts "Error. Please enter a number between 1 & 9"
 end
