@@ -24,3 +24,13 @@ def board_index()
 end
 
 puts board_index
+
+puts "Where would you like to go? Please enter a number between 1 & 9."
+
+user_choice = gets.to_i
+
+if user_choice == 1
+  blank[0][0] << "X"
+else 
+  puts "Error. Please enter a number between 1 & 9"
+end
