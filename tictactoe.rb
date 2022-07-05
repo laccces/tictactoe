@@ -5,6 +5,14 @@ blank = [["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]
 divider = "--+---+--"
 example_board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
+=begin
+puts "Enter name for Player 1:"
+player_one = gets
+
+puts "Enter name for Player 2:"
+player_two = gets
+=end
+
 puts "GENERATED NEW BOARD:"
 puts "#{blank[0][0]} | #{blank[0][1]} | #{blank[0][2]}"
   puts divider
