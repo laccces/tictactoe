@@ -3,7 +3,7 @@
 #reference
 blank = [["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]  
 divider = "--+---+--"
-example_board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
 
 =begin
 puts "Enter name for Player 1:"
@@ -20,12 +20,16 @@ puts "#{blank[0][0]} | #{blank[0][1]} | #{blank[0][2]}"
   puts divider
   puts "#{blank[2][0]} | #{blank[2][1]} | #{blank[2][2]}"
 
-puts "Here's the board index:"
-puts "#{example_board[0][0]} | #{example_board[0][1]} | #{example_board[0][2]}"
+def board_index()
+  puts "Here's the board index:"
+  example_board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  divider = "--+---+--"
+  puts "#{example_board[0][0]} | #{example_board[0][1]} | #{example_board[0][2]}"
   puts divider
   puts "#{example_board[1][0]} | #{example_board[1][1]} | #{example_board[1][2]}"
   puts divider
   puts "#{example_board[2][0]} | #{example_board[2][1]} | #{example_board[2][2]}"
+end
 
 puts "Where would you like to go? Please enter a number between 1 & 9."
 
