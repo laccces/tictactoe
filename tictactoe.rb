@@ -4,6 +4,7 @@
 @blank = [["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]  
 @divider = "--+---+--"
 @example_board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+@i = 0
 
 def board
   puts "#{@blank[0][0]} | #{@blank[0][1]} | #{@blank[0][2]}"
@@ -51,21 +52,21 @@ end
 
 def check_winner
   if @blank[0][0] == "X" && @blank[0][1] == "X" && @blank[0][2] == "X"
-    return win
+    @i += 1
   elsif @blank[1][0] == "X" && @blank[1][1] == "X" && @blank[1][2] == "X"
-    return win
+    @i += 1
   elsif @blank[2][0] == "X" && @blank[2][1] == "X" && @blank[2][2] == "X"
-    return win
+    @i += 1
   elsif @blank[0][0] == "X" && @blank[1][1] == "X" && @blank[2][2] == "X"
-    return win
+    @i += 1
   elsif @blank[0][2] == "X" && @blank[1][1] == "X" && @blank[2][0] == "X"
-    return win
+    @i += 1
   elsif @blank[0][0] == "X" && @blank[1][0] == "X" && @blank[2][0] == "X"
-    return win
+    @i += 1
   elsif @blank[0][1] == "X" && @blank[1][1] == "X" &&  @blank[2][1] == "X"
-    return win
+    @i += 1
   elsif @blank[0][2] == "X" && @blank[1][2] == "X" && @blank[2][2] == "X"
-    return win
+    @i += 1
   end
 end
 
@@ -82,13 +83,13 @@ player_two = gets
 puts "GENERATED NEW BOARD:"
 board
 
-board_index
+while @i < 1
+  puts "Where would you like to go? Please enter a number between 1 & 9."
+  board_index
+  user_move
+  puts "Here's your move:"
+  board
+  check_winner
+end
 
-puts "Where would you like to go? Please enter a number between 1 & 9."
-
-user_move
-
-board
-
-check_winner
-
+puts "You win!"
